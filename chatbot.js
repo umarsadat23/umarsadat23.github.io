@@ -37,15 +37,17 @@ function addMessage(sender, message) {
 
 // Respond to user messages
 function respondToMessage(message) {
-  let response = "I'm sorry, I don't understand. Can you rephrase?";
+  let response;
   if (message.toLowerCase().includes('hi') || message.toLowerCase().includes('hello')) {
     response = "Hello! How can I help you?";
   } else if (message.toLowerCase().includes('contact')) {
     response = "You can contact me via the contact form or email.";
   } else if (message.toLowerCase().includes('name')) {
     response = "I'm your friendly chatbot!";
+  } else {
+    response = "Thank you for your message! Your feedback is much appreciated. If you have any questions or suggestions, please fill out the contact form. I'd love to hear from you! 😊";
   }
   setTimeout(() => {
     addMessage('bot', response);
-  }, 500); // Simulate a delay before responding
+  }, 500);
 }
