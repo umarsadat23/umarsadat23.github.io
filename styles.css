@@ -1,0 +1,298 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+  }
+  
+  canvas#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  main {
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    z-index: 1;
+  }
+  
+  header {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #4CAF50;
+    object-fit: cover;
+  }
+ /* Navigation Container */
+.nav-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 10px;
+    position: fixed; /* Make the nav bar stick to the top */
+    top: 20px; /* Add margin from the top */
+    left: 50%; /* Center the box horizontally */
+    transform: translateX(-50%); /* Center the box horizontally */
+    border-radius: 10px; /* Rounded corners */
+    z-index: 1000; /* Ensure it stays above other content */
+  }
+  
+  /* Navigation Bar */
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    color: #4CAF50; /* Change color on hover */
+  }
+  #about {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+  
+  #about h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-content h3 {
+    margin-top: 20px;
+  }
+  
+  .about-content ul {
+    list-style-type: disc;
+    margin: 10px 0 20px 20px;
+  }
+  
+  .about-content ul li {
+    margin: 10px 0;
+  }
+  #blog {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+  
+  #blog h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .blog-post {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+  
+  .blog-post h3 {
+    margin-top: 0;
+  }
+  
+  .blog-post p {
+    margin: 10px 0;
+  }
+  
+  .read-more {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .read-more:hover {
+    text-decoration: underline;
+  }
+  #contact {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+  
+  #contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #45a049;
+  }
+  
+  .social-links {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .social-links a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+ /* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Apply animation to sections */
+  section {
+    animation: fadeIn 1s ease-in;
+  }
+  body.light-mode {
+    background-color: white;
+    color: #333;
+  }
+  
+  body.light-mode header {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  body.light-mode .blog-post,
+  body.light-mode #about,
+  body.light-mode #contact {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+  }
+  /* Light Mode Styles */
+body.light-mode {
+    background-color: white;
+    color: #333;
+  }
+  
+  body.light-mode header {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  body.light-mode .blog-post,
+  body.light-mode #about,
+  body.light-mode #skills,
+  body.light-mode #contact {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+  }
+  
+  body.light-mode .nav-container {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  body.light-mode .nav-container ul li a {
+    color: #333;
+  }
+  
+  body.light-mode .nav-container ul li a:hover {
+    color: #4CAF50;
+  }
+  /* Navigation Bar */
+.nav-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-container ul li {
+    margin: 0 15px;
+  }
+  
+  .nav-container ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-container ul li a:hover {
+    color: #4CAF50;
+  }
+  
+  /* Toggle Button */
+  #theme-toggle {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #theme-toggle:hover {
+    background-color: #45a049;
+  }
+  footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
